@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="col-sm-4 offset-sm-4">
+    <div>
+      <table class="egt" align="center">
+        <tr>
+          <td width="100px">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png"
+              height="100px"
+            />
+          </td>
+
+          <td width="110px">
+            <img
+              src="https://www.todavianose.com/wp-content/uploads/2018/04/mongo-db-design.png"
+              height="70px"
+            />
+          </td>
+          <td width="100px">
+            <img
+              src="https://seeklogo.com/images/N/nestjs-logo-09342F76C0-seeklogo.com.png"
+              height="80px"
+            />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="card card-body">
+      <form (submit)="edit ? updateProduct() : submitProduct()">
+        <div class="form-group">
+          <input
+            type="text"
+            name="name"
+            [(ngModel)]="product.name"
+            class="form-control"
+            placeholder="nombre..."
+            autofocus
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="description"
+            [(ngModel)]="product.description"
+            class="form-control"
+            placeholder="descripcion..."
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="price"
+            [(ngModel)]="product.price"
+            class="form-control"
+            placeholder="precio..."
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="imageURL"
+            [(ngModel)]="product.imageURL"
+            class="form-control"
+            placeholder="url (imagen)..."
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Guardar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
